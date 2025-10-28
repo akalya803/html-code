@@ -1,4 +1,4 @@
-'<table>
+<table>
 <tr><td style="padding: 5px; background-color: #add8ef; font-size: medium; font-weight: bold; color: #000000"> Current EAC Summary for Review</td>
 <td style="padding:5px;font-size: medium; font-weight: bold; color: #00000;background-color:#add8ef;"><u><a href="' + SC0 + 'ProjectCustomDetail.aspx?filter=EAC+Adjustment">Click here to go back to EAC Approval/Rejection Screen</a></u></td>
 </tr>
@@ -373,32 +373,7 @@
 </td>
 
 </tr>
-<br><br>
-<tr>
-<td style="width: 50%;">
-<table style="border: 2px solid #000000; border-collapse: collapse; float: left;width: 50%">
-<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
-<td colspan="2"style="padding: 5px; min-width:200px; max-width:300px; border: 1px solid #000000; border-collapse: collapse; border-bottom: 2px solid #000000; background-color: #d2eaf6; font-weight: bold; color: #000000"><u><a href="' + SC0 + 'CustomLog.aspx?ID=12">Risk Register - Project Currency - '+ISNULL(ID618,'-')+'</a></u></td>
-</tr> 
 
-<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
-<td style="padding:5px; min-width:200px;max-width:300px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold; ">Net Cost of the Open Threats</td>
-<td id="lblNetCstThreat"style="padding:5px; min-width:390px;max-width:390px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff; "><script>document.getElementById("lblNetCstThreat").innerHTML = parseFloat(('+ISNULL(ID1317,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
-</tr>
-
-<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
-<td style="padding: 5px; min-width:200px;max-width:300px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Net Cost of Open Opportunities</td>
-<td id="lblNetCstOpp"style="padding: 5px; min-width:390px;max-width:390px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff; "><script>document.getElementById("lblNetCstOpp").innerHTML = parseFloat(('+ISNULL(ID1323,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
-</tr>
-
-<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
-<td style="padding:5px; min-width:200px;max-width:300px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold; ">Cumulative Net T&ampO</td>
-<td id="lblNetTnO"style="padding:5px; min-width:390px;max-width:390px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff; "><script>document.getElementById("lblNetTnO").innerHTML = parseFloat(('+ISNULL(ID2412,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
-</tr>
-
-</table>
-</td> 
-</tr>
 </table>
 
 <script>
@@ -504,4 +479,4 @@
 	} else {
 	document.getElementById("ProcurementStatus").style.backgroundColor = "#ffffff";
 	}
-</script>'
+</script>
