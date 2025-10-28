@@ -1,0 +1,489 @@
+'<table>
+<tr><td style="padding: 5px; background-color: #add8ef; font-size: medium; font-weight: bold; color: #000000"> Current EAC Summary for Review</td>
+<td style="padding:5px;font-size: medium; font-weight: bold; color: #00000;background-color:#add8ef;"><u><a href="' + SC0 + 'ProjectCustomDetail.aspx?filter=EAC+Adjustment">Click here to go back to EAC Approval/Rejection Screen</a></u></td>
+</tr>
+<tr>
+<td style="width: 50%;">
+<table style="border: 2px solid #000000; border-collapse: collapse;width: 50%;">
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td colspan="2"style="padding: 5px; min-width:150px; max-width:300px; border: 1px solid #000000; border-bottom: 2px solid #000000; border-collapse: collapse; background-color: #d2eaf6; font-weight: bold; color: #000000">Project Information</td>
+</tr> 
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;word-wrap: break-word; ">
+<td style="padding: 5px; min-width:150px; max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Project Name</td>
+<td style="padding: 5px; min-width:450px; max-width:450px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;">'+ISNULL(ID1407,' ')+' ( '+ISNULL(ID434,' ')+' )</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:150px; max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Project Manager</td>
+<td style="padding: 5px; min-width:450px; max-width:450px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;">'+ISNULL((Parent(ID1640).FirstName+' '+Parent(ID1640).Surname),' ')+'</td>
+</tr> 
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:150px; max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Region</td>
+<td style="padding: 5px; min-width:450px; max-width:450px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;">'+ISNULL((Parent(ID2048).Description),'-')+'</td>
+</tr>
+ 
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:150px; max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Country</td>
+<td style="padding: 5px; min-width:450px; max-width:450px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;">'+ISNULL((Parent(ID1392).Description),'-')+'</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:150px; max-width:150px; height:100px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Project Summary</td>
+<td style="padding: 5px; min-width:450px; max-width:450px; height:100px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;">'+ISNULL(ID1405,'-')+'</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:150px; max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Project Start Date</td>
+<td style="padding: 5px; min-width:450px; max-width:450px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;">'+ISNULL(ID2410,'-')+'</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:150px; max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Project End Date</td>
+<td style="padding: 5px; min-width:450px; max-width:450px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;">'+ISNULL(ID2411,'-')+'</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td colspan="4" style="padding: 5px; min-width:82px; max-width:120px; border: none;   border-collapse: collapse; background-color: #ffffff;text-align: right;"></td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td colspan="2"style="padding: 5px; min-width:150px; max-width:300px; border: 1px solid #000000; border-bottom: 2px solid #000000; border-collapse: collapse; border-right: 4px double black; background-color: #d2eaf6; font-weight: bold; color: #000000">Cash Flow - USD</td>
+<td colspan="2"style="padding: 5px; min-width:150px; max-width:300px; border: 1px solid #000000; border-bottom: 2px solid #000000; border-collapse: collapse; background-color: #d2eaf6; font-weight: bold; color: #000000">Risk Register - USD</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:150px; max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Invoiced</td>
+<td id="CshFLInv"style="padding: 5px; min-width:150px; max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff; border-right: 4px double black;"><script>document.getElementById("CshFLInv").innerHTML = parseFloat(('+ISNULL(ID878,0)+'/'+ISNULL(ID625,1)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td style="padding: 5px; min-width:150px; max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Net Cost of Open Threats</td>
+<td id="lblNetCstThreat"style="padding: 5px; min-width:150px; max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;"><script>document.getElementById("lblNetCstThreat").innerHTML = parseFloat(('+ISNULL(ID1317,0)+'/'+ISNULL(ID625,1)+').toFixed(2)).toLocaleString("en-US");</script></td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:150px; max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Payment Received</td>
+<td id="CshFLPayR"style="padding: 5px; min-width:150px; max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff; border-right: 4px double black;"><script>document.getElementById("CshFLPayR").innerHTML = parseFloat(('+ISNULL(ID748,0)+'/'+ISNULL(ID625,1)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td rowspan="2"style="padding: 5px; min-width:150px; max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Net Cost of Open Opportunities</td>
+<td id="lblNetCstOpp"rowspan="2"style="padding: 5px; min-width:150px; max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;"><script>document.getElementById("lblNetCstOpp").innerHTML = parseFloat(('+ISNULL(ID1323,0)+'/'+ISNULL(ID625,1)+').toFixed(2)).toLocaleString("en-US");</script></td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:150px; max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Unbilled</td>
+<td id="CshFLUnbil"style="padding: 5px; min-width:150px; max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff; border-right: 4px double black;"><script>document.getElementById("CshFLUnbil").innerHTML = parseFloat(('+ISNULL(ID879,0)+'/'+ISNULL(ID625,1)+').toFixed(2)).toLocaleString("en-US");</script></td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:150px; max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Past Dues</td>
+<td id="CshFLPstDu"style="padding: 5px; min-width:150px; max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff; border-right: 4px double black;"><script>document.getElementById("CshFLPstDu").innerHTML = parseFloat(('+ISNULL(ID1226,0)+'/'+ISNULL(ID625,1)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td style="padding: 5px; min-width:150px; max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Cumulative Net T&ampO</td>
+<td id="lblNetTnO" style="padding: 5px; min-width:150px; max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;"><script>document.getElementById("lblNetTnO").innerHTML = parseFloat(('+ISNULL(ID2412,0)+'/'+ISNULL(ID625,1)+').toFixed(2)).toLocaleString("en-US");</script></td>
+</tr>
+ 
+</table>
+</td>
+<td style="width: 50%;">
+<table style="border: 2px solid #000000; border-collapse: collapse; margin-left: 10px;width: 50%">
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td colspan="5"style="padding: 5px; min-width:150px; max-width:300px; border: 1px solid #000000; border-bottom: 2px solid #000000; border-collapse: collapse; background-color: #d2eaf6; font-weight: bold; color: #000000">Financial Status (in Thousands) Project Currency - '+ISNULL(ID618,'-')+'</td>
+</tr>
+  
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:250px; max-width:250px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;"></td>
+<td style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Revenue</td>
+<td style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Cost</td>
+<td style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Margin</td>
+<td style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Margin %</td>
+<td style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">% Complete Cost</td>
+</tr>
+ 
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:250px; max-width:250px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Original Budget (ME)</td>
+<td id="lblRevOrgBudgt"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblRevOrgBudgt").innerHTML = parseFloat(('+ISNULL(ID1163/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="lblCstOrgBudgt"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblCstOrgBudgt").innerHTML = parseFloat(('+ISNULL(ID2395/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="lblMarOrgBudgt"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblMarOrgBudgt").innerHTML = parseFloat(('+ISNULL(ID1165/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="lblMarginOrgBudgt"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblMarginOrgBudgt").innerHTML = parseFloat('+ISNULL(ID2396,0)+').toFixed(2);</script> %</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:250px; max-width:250px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Booked Change Orders (ME)</td>
+<td id="lblRevCOBudgt"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblRevCOBudgt").innerHTML = parseFloat(('+ISNULL(ID2400/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="lblCstCOBudgt"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblCstCOBudgt").innerHTML = parseFloat(('+ISNULL(ID2401/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="lblMarCOBudgt"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblMarCOBudgt").innerHTML = parseFloat(('+ISNULL(ID2402/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="lblMarginCOBudgt"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblMarginCOBudgt").innerHTML = parseFloat('+ISNULL(ID2403,0)+').toFixed(2);</script> %</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:250px; max-width:250px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Approved EAC Adjustments (ME)</td>
+<td id="lblRevAEAC"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblRevAEAC").innerHTML = parseFloat(('+ISNULL(ID2397/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="lblCstAEAC"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblCstAEAC").innerHTML = parseFloat(('+ISNULL(ID746/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="lblMarAEAC"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblMarAEAC").innerHTML = parseFloat(('+ISNULL(ID2398/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="lblMarginAEAC"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblMarginAEAC").innerHTML = parseFloat('+ISNULL(ID2399,0)+').toFixed(2);</script> %</td>
+</tr>
+
+<tr style="font-size:13px;text-align: left; word-break: break-word; white-space: pre-wrap;background-color: #e1e1e1;font-weight: bold;">
+<td style="padding: 5px; min-width:250px; max-width:250px; border: 1.5px solid #000000; border-collapse: collapse; background-color: #e1e1e1;font-weight: bold;">Current Approved EAC Budget (ME)</td>
+<td id="lblRevCAEAC"style="padding: 5px; min-width:100px; max-width:200px; border: 1.5px solid #000000; border-collapse: collapse; background-color: #e1e1e1;text-align: right;"><script>document.getElementById("lblRevCAEAC").innerHTML = parseFloat(('+ISNULL(ID675/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="lblCstCAEAC"style="padding: 5px; min-width:100px; max-width:200px; border: 1.5px solid #000000; border-collapse: collapse; background-color: #e1e1e1;text-align: right;"><script>document.getElementById("lblCstCAEAC").innerHTML = parseFloat(('+ISNULL(ID631/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="lblMarCAEAC"style="padding: 5px; min-width:100px; max-width:200px; border: 1.5px solid #000000; border-collapse: collapse; background-color: #e1e1e1;text-align: right;"><script>document.getElementById("lblMarCAEAC").innerHTML = parseFloat(('+ISNULL(ID694/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="lblMarginCAEAC" style="padding: 5px; min-width:100px; max-width:200px; border: 1.5px solid #000000; border-collapse: collapse; background-color: #e1e1e1;text-align: right;"><script>document.getElementById("lblMarginCAEAC").innerHTML = parseFloat('+ISNULL(ID697,0)+').toFixed(2);</script> %</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:250px; max-width:250px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Inception to Date actuals (ME)</td>
+<td id="lblRevITD"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblRevITD").innerHTML = parseFloat(('+ISNULL(ID693/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="lblCstITD"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblCstITD").innerHTML = parseFloat(('+ISNULL(ID634/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="lblMarITD"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblMarITD").innerHTML = parseFloat(('+ISNULL(ID695/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="lblMarginITD" style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblMarginITD").innerHTML = parseFloat('+ISNULL(ID698,0)+').toFixed(2);</script> %</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:250px; max-width:250px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;text-align: centre;"><i>% Complete Cost</i></td>
+<td style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-right-color: #ffffff; border-collapse: collapse; background-color: #ffffff;text-align: right;"></td>
+<td id="lblPerComp"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-right-color: #ffffff; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblPerComp").innerHTML = parseFloat('+ISNULL(ID2407,0)+').toFixed(2);</script> %</td>
+<td style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-right-color: #ffffff; border-collapse: collapse; background-color: #ffffff;text-align: right;"></td>
+<td style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"></td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:250px; max-width:250px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Cost to Complete (CTC)</td>
+<td id="lblRevCTC"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblRevCTC").innerHTML = parseFloat(('+ISNULL(ID717/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="lblCstCTC"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblCstCTC").innerHTML = parseFloat(('+ISNULL(ID708/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="lblMarCTC"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblMarCTC").innerHTML = parseFloat(('+ISNULL(ID718/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="lblMarginCTC"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblMarginCTC").innerHTML = parseFloat('+ISNULL(ID719,0)+').toFixed(2);</script> %</td>
+</tr>
+
+<tr style="font-size:13px;text-align: left; word-break: break-word; white-space: pre-wrap;background-color: #e1e1e1;font-weight: bold;">
+<td style="padding: 5px; min-width:250px; max-width:250px; border: 1px solid #000000; border-collapse: collapse; background-color: #e1e1e1;font-weight: bold;">Proposed Estimate-At-Completion (EAC)</td>
+<td id="lblRevPEAC"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #e1e1e1;text-align: right;"><script>document.getElementById("lblRevPEAC").innerHTML = parseFloat(('+ISNULL(ID855/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="lblCstPEAC"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #e1e1e1;text-align: right;"><script>document.getElementById("lblCstPEAC").innerHTML = parseFloat(('+ISNULL(ID857/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="lblMarPEAC"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #e1e1e1;text-align: right;"><script>document.getElementById("lblMarPEAC").innerHTML = parseFloat(('+ISNULL(ID866/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="lblMarginPEAC"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #e1e1e1;text-align: right;"><script>document.getElementById("lblMarginPEAC").innerHTML = parseFloat('+ISNULL(ID867,0)+').toFixed(2);</script> %</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:250px; max-width:250px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">ITD Post EAC Adjustment</td>
+<td id="ITDPoEACRev"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("ITDPoEACRev").innerHTML = parseFloat(('+ISNULL(ID3589/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="ITDPoEACCst"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("ITDPoEACCst").innerHTML = parseFloat(('+ISNULL(ID2443/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="ITDPoEACGM"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("ITDPoEACGM").innerHTML = parseFloat(('+ISNULL(ID3590/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="ITDPoEACGMP"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("ITDPoEACGMP").innerHTML = parseFloat('+ISNULL(ID3591,0)+').toFixed(2);</script>%</td>
+<td id="ITDPoEACCTC"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("ITDPoEACCTC").innerHTML = parseFloat('+ISNULL(ID3592,0)+').toFixed(2);</script>%</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:250px; max-width:250px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">EAC Approval Level</td>
+<td colspan="2" style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;">'+ISNULL((Parent(ID846).Description),'-')+'</td>
+<td style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">EAC Sign</td>
+<td colspan="2" style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;">'+ISNULL(ID845,'-')+'</td>
+</tr>
+
+!--<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:250px; max-width:250px; border: 1px solid #000000; border-right-color: #ffffff; border-collapse: collapse; background-color: #ffffff;font-weight: bold;"></td>
+<td style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-right-color: #ffffff; border-collapse: collapse; background-color: #ffffff;text-align: right;"></td>
+<td style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-right-color: #ffffff; border-collapse: collapse; background-color: #ffffff;text-align: right;">'+ISNULL(ID845,'-')+'</td>
+<td style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-right-color: #ffffff; border-collapse: collapse; background-color: #ffffff;text-align: right;"></td>
+<td style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"></td>
+</tr>--!
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:250px; max-width:250px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Current Period Impact</td>
+<td id="lblRevCPImp"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblRevCPImp").innerHTML = parseFloat(('+ISNULL(ID2404/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="lblCstCPImp"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblCstCPImp").innerHTML = parseFloat(('+ISNULL(ID2405/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td id="lblMarCPImp"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblMarCPImp").innerHTML = parseFloat(('+ISNULL(ID2406/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"></td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:250px; max-width:250px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Current Period P&ampL Impact</td>
+<td id="lblRevCPLImp"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblRevCPLImp").innerHTML = parseFloat(('+ISNULL(ID870/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"></td>
+<td style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"></td>
+<td style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"></td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:250px; max-width:250px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Current Quarter Impact</td>
+<td id="CurrQrtImp"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("CurrQrtImp").innerHTML = parseFloat(('+ISNULL(ID881/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"></td>
+<td style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"></td>
+<td style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"></td>
+<td style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"></td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:250px; max-width:250px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Current Quarter P&ampL Impact</td>
+<td id="lblRevCQPLImp"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblRevCQPLImp").innerHTML = parseFloat(('+ISNULL(ID880/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"></td>
+<td style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"></td>
+<td style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"></td>
+</tr>
+ 
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:250px; max-width:250px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Remaining Contingency</td>
+<td colspan="2"id="lblCstRC"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblCstRC").innerHTML = parseFloat(('+ISNULL(ID716/1000,0)+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;font-weight: bold;">Contingency % of Cost</td>
+<td colspan="2" id="lblCntPCst"style="padding: 5px; min-width:100px; max-width:200px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("lblCntPCst").innerHTML = parseFloat('+ISNULL(ID3593,0)+').toFixed(2);</script>%</td>
+</tr>
+
+</table>
+</td>
+</tr>
+<br><br>
+<tr>
+<td style="width: 50%;">
+<table style="border: 2px solid #000000; border-collapse: collapse;width: 50%">
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td colspan="3"style="padding: 5px; min-width:150px; max-width:300px; border: 1px solid #000000; border-bottom: 2px solid #000000; border-collapse: collapse; background-color: #d2eaf6; font-weight: bold; color: #000000">Traffic Light Summary</td>
+</tr> 
+<tr style="padding:5px;background-color: #ebf6fb;font-size:normal;text-align:left;color:#000000;font-weight:bold">
+<td style="padding:5px;min-width:150px;max-width:150px; border: 1px solid #000000; border-bottom: 2px solid #000000; border-right: 2px solid #000000; border-collapse: collapse; ">Item</td>
+<td style="padding:5px;min-width:100px;max-width:100px; border: 1px solid #000000; border-bottom: 2px solid #000000; border-right: 2px solid #000000; border-collapse: collapse; ">Status</td>
+<td style="padding:5px;min-width:340px;max-width:340px; border: 1px solid #000000; border-bottom: 2px solid #000000; border-collapse: collapse; ">Details</td>
+</tr>
+ 
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:150px;max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;font-weight: bold;">Schedule</td>
+<td id="SchStatus"style="padding: 5px; min-width:100px;max-width:100px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left; color: #ffffff;">'+ISNULL((Parent(ID2320).Description),'-')+'</td>
+<td style="padding: 5px; min-width:340px;max-width:340px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL(ID2316,'-')+'</td>
+</tr>
+ 
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:150px;max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;font-weight: bold;">Cost</td>
+<td id="CstStatus"style="padding: 5px; min-width:100px;max-width:100px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left; color: #ffffff;">'+ISNULL((Parent(ID2265).Description),'-')+'</td>
+<td style="padding: 5px; min-width:340px;max-width:340px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL(ID2292,'-')+'</td>
+</tr>
+ 
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:150px;max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;font-weight: bold;">Safety</td>
+<td id="SafStatus"style="padding: 5px; min-width:100px;max-width:100px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left; color: #ffffff;">'+ISNULL((Parent(ID731).Description),'-')+'</td>
+<td style="padding: 5px; min-width:340px;max-width:340px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL(ID1060,'-')+'</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:150px;max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;font-weight: bold;">Technical</td>
+<td id="TechStatus"style="padding: 5px; min-width:100px;max-width:100px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left; color: #ffffff;">'+ISNULL((Parent(ID734).Description),'-')+'</td>
+<td style="padding: 5px; min-width:340px;max-width:340px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL(ID735,'-')+'</td>
+</tr>
+ 
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:150px;max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;font-weight: bold;">Cash Flow</td>
+<td id="CashflowStatus"style="padding: 5px; min-width:100px;max-width:100px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left; color: #ffffff;">'+ISNULL((Parent(ID737).Description),'-')+'</td>
+<td style="padding: 5px; min-width:340px;max-width:340px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL(ID738,'-')+'</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:150px;max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;font-weight: bold;">Customer Satisfaction</td>
+<td id="CustSatStatus"style="padding: 5px; min-width:100px;max-width:100px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left; color: #ffffff;">'+ISNULL((Parent(ID740).Description),'-')+'</td>
+<td style="padding: 5px; min-width:340px;max-width:340px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL(ID741,'-')+'</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:150px;max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;font-weight: bold;">Risk</td>
+<td id="RiskStatus"style="padding: 5px; min-width:100px;max-width:100px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left; color: #ffffff;">'+ISNULL((Parent(ID2266).Description),'-')+'</td>
+<td style="padding: 5px; min-width:340px;max-width:340px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL(ID1319,'-')+'</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:150px;max-width:150px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;font-weight: bold;">Procurement</td>
+<td id="ProcurementStatus"style="padding: 5px; min-width:100px;max-width:100px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left; color: #ffffff;">'+ISNULL((Parent(ID2321).Description),'-')+'</td>
+<td style="padding: 5px; min-width:340px;max-width:340px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL(ID2378,'-')+'</td>
+</tr>
+
+
+</table>
+</td>
+
+
+<td style="width: 50%;">
+<table style="border: 2px solid #000000; border-collapse: collapse; margin-left: 10px; width: 50%">
+  
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:200px; max-width:300px; border: 1px solid #000000; border-top: 2px solid #000000; border-right: 2px solid #000000; border-bottom: 2px solid #000000; border-collapse: collapse; background-color: #d2eaf6;font-weight: bold;color:#000000;">EAC Justification</td>
+<td colspan="2"style="padding: 5px; min-width:200px; max-width:300px; border: 1px solid #000000; border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL(ID813,'-')+'</td>
+</tr>
+
+<tr style="padding:5px; font-size:normal;text-align:left;color:#000000 margin-left: 0px; margin-right: 0px">
+<td style="padding:5px;min-width:280px;max-width:280px;  border-collapse: collapse;"></td>
+<td style="padding:5px;min-width:100px;max-width:100px;  border-collapse: collapse;"></td>
+<td style="padding:5px;min-width:300px;max-width:300px; border-collapse: collapse;"></td>
+</tr>
+
+<tr style="padding:5px;background-color: #d2eaf6;font-size:normal;text-align:left;color:#000000;font-weight:bold">
+<td style="padding:5px;min-width:280px;max-width:280px; border: 1px solid #000000; border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-right: 2px solid #000000; border-collapse: collapse; ">Source</td>
+<td style="padding:5px;min-width:100px;max-width:100px; border: 1px solid #000000; border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-right: 2px solid #000000; border-collapse: collapse; ">Value - '+ISNULL(ID618,'-')+'</td>
+<td style="padding:5px;min-width:300px;max-width:300px; border: 1px solid #000000; border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-collapse: collapse; ">Comments</td>
+</tr>
+
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:280px;max-width:280px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL((Parent(ID777).Description),' ')+'</td>
+<td id="ValueOne"style="padding: 5px; min-width:100px;max-width:100px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("ValueOne").innerHTML = parseFloat(('+IIF(ID2573 = 0, ' ', ISNULL(ID2573,' '))+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td style="padding: 5px; min-width:300px;max-width:300px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL(ID2583,' ')+'</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:280px;max-width:280px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL((Parent(ID2564).Description),' ')+'</td>
+<td id="ValueTwo"style="padding: 5px; min-width:100px;max-width:100px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("ValueTwo").innerHTML = parseFloat(('+IIF(ID2574 = 0, ' ', ISNULL(ID2574,' '))+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td style="padding: 5px; min-width:300px;max-width:300px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL(ID2584,' ')+'</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:280px;max-width:280px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL((Parent(ID2565).Description),' ')+'</td>
+<td id="ValueThree"style="padding: 5px; min-width:100px;max-width:100px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("ValueThree").innerHTML = parseFloat(('+IIF(ID2575 = 0, ' ', ISNULL(ID2575,' '))+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td style="padding: 5px; min-width:300px;max-width:300px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL(ID2585,' ')+'</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:280px;max-width:280px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL((Parent(ID2566).Description),' ')+'</td>
+<td id="ValueFour"style="padding: 5px; min-width:100px;max-width:100px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("ValueFour").innerHTML = parseFloat(('+IIF(ID2576 = 0, ' ', ISNULL(ID2576,' '))+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td style="padding: 5px; min-width:300px;max-width:300px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL(ID2586,' ')+'</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:280px;max-width:280px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL((Parent(ID2567).Description),' ')+'</td>
+<td id="ValueFive"style="padding: 5px; min-width:100px;max-width:100px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("ValueFive").innerHTML = parseFloat(('+IIF(ID2577 = 0, ' ', ISNULL(ID2577,' '))+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td style="padding: 5px; min-width:300px;max-width:300px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL(ID2587,' ')+'</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:280px;max-width:280px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL((Parent(ID2568).Description),' ')+'</td>
+<td id="ValueSix"style="padding: 5px; min-width:100px;max-width:100px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("ValueSix").innerHTML = parseFloat(('+IIF(ID2578 = 0, ' ', ISNULL(ID2578,' '))+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td style="padding: 5px; min-width:300px;max-width:300px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL(ID2588,' ')+'</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:280px;max-width:280px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL((Parent(ID2569).Description),' ')+'</td>
+<td id="ValueSeven"style="padding: 5px; min-width:100px;max-width:100px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("ValueSeven").innerHTML = parseFloat(('+IIF(ID2579 = 0, ' ', ISNULL(ID2579,' '))+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td style="padding: 5px; min-width:300px;max-width:300px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL(ID2589,' ')+'</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:280px;max-width:280px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL((Parent(ID2570).Description),' ')+'</td>
+<td id="ValueEight"style="padding: 5px; min-width:100px;max-width:100px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("ValueEight").innerHTML = parseFloat(('+IIF(ID2580 = 0, ' ', ISNULL(ID2580,' '))+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td style="padding: 5px; min-width:300px;max-width:300px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL(ID2590,' ')+'</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:280px;max-width:280px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL((Parent(ID2571).Description),' ')+'</td>
+<td id="ValueNine"style="padding: 5px; min-width:100px;max-width:100px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("ValueNine").innerHTML = parseFloat(('+IIF(ID2581 = 0, ' ', ISNULL(ID2581,' '))+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td style="padding: 5px; min-width:300px;max-width:300px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL(ID2591,' ')+'</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:280px;max-width:280px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL((Parent(ID2572).Description),' ')+'</td>
+<td id="ValueTen"style="padding: 5px; min-width:100px;max-width:100px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: right;"><script>document.getElementById("ValueTen").innerHTML = parseFloat(('+IIF(ID2582 = 0, ' ', ISNULL(ID2582,' '))+').toFixed(2)).toLocaleString("en-US");</script></td>
+<td style="padding: 5px; min-width:300px;max-width:300px; border: 1px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;">'+ISNULL(ID2592,' ')+'</td>
+</tr>
+
+<tr style="font-size:normal;text-align: left; word-break: break-word; white-space: pre-wrap;">
+<td style="padding: 5px; min-width:200px; max-width:300px; border: 1px solid #000000; border-top: 2px solid #000000; border-right: 2px solid #000000; border-collapse: collapse; font-weight:bold;">Sum of value of EAC Breakdown</td>
+<td id="ValueSumTotal"colspan="2"style="padding: 5px; min-width:200px; max-width:300px; border: 1px solid #000000; border-top: 2px solid #000000; border-collapse: collapse; background-color: #ffffff;text-align: left;"><script>document.getElementById("ValueSumTotal").innerHTML = parseFloat(('+IIF(ID2593 = 0, ' ', ISNULL(ID2593,' '))+').toFixed(2)).toLocaleString("en-US");</script></td>
+</tr>
+
+</table>
+</td>
+
+</tr>
+</table>
+
+<script>
+	var cellValue = document.getElementById("SchStatus").textContent.trim(); 
+	if(cellValue === "Diminishing"){
+	document.getElementById("SchStatus").style.backgroundColor = "#E74C3C";
+	} else if(cellValue === "No Improvement") {
+	document.getElementById("SchStatus").style.backgroundColor = "#F1C40F";
+	} else if(cellValue === "Improving") {
+	document.getElementById("SchStatus").style.backgroundColor = "#2ECC71";
+	} else {
+	document.getElementById("SchStatus").style.backgroundColor = "#ffffff";
+	}
+</script>
+
+<script>
+	var cellValue = document.getElementById("CstStatus").textContent.trim(); 
+	if(cellValue === "Red"){
+	document.getElementById("CstStatus").style.backgroundColor = "#E74C3C";
+	} else if(cellValue === "Amber") {
+	document.getElementById("CstStatus").style.backgroundColor = "#F1C40F";
+	} else if(cellValue === "Green") {
+	document.getElementById("CstStatus").style.backgroundColor = "#2ECC71";
+	} else {
+	document.getElementById("CstStatus").style.backgroundColor = "#ffffff";
+	}
+</script>
+
+<script>
+	var cellValue = document.getElementById("SafStatus").textContent.trim(); 
+	if(cellValue === "Diminishing"){
+	document.getElementById("SafStatus").style.backgroundColor = "#E74C3C";
+	} else if(cellValue === "No Improvement") {
+	document.getElementById("SafStatus").style.backgroundColor = "#F1C40F";
+	} else if(cellValue === "Improving") {
+	document.getElementById("SafStatus").style.backgroundColor = "#2ECC71";
+	} else {
+	document.getElementById("SafStatus").style.backgroundColor = "#ffffff";
+	}
+</script>
+
+<script>
+	var cellValue = document.getElementById("TechStatus").textContent.trim(); 
+	if(cellValue === "Diminishing"){
+	document.getElementById("TechStatus").style.backgroundColor = "#E74C3C";
+	} else if(cellValue === "No Improvement") {
+	document.getElementById("TechStatus").style.backgroundColor = "#F1C40F";
+	} else if(cellValue === "Improving") {
+	document.getElementById("TechStatus").style.backgroundColor = "#2ECC71";
+	} else {
+	document.getElementById("TechStatus").style.backgroundColor = "#ffffff";
+	}
+</script>
+
+<script>
+	var cellValue = document.getElementById("CashflowStatus").textContent.trim(); 
+	if(cellValue === "Diminishing"){
+	document.getElementById("CashflowStatus").style.backgroundColor = "#E74C3C";
+	} else if(cellValue === "No Improvement") {
+	document.getElementById("CashflowStatus").style.backgroundColor = "#F1C40F";
+	} else if(cellValue === "Improving") {
+	document.getElementById("CashflowStatus").style.backgroundColor = "#2ECC71";
+	} else {
+	document.getElementById("CashflowStatus").style.backgroundColor = "#ffffff";
+	}
+</script>
+
+<script>
+	var cellValue = document.getElementById("CustSatStatus").textContent.trim(); 
+	if(cellValue === "Diminishing"){
+	document.getElementById("CustSatStatus").style.backgroundColor = "#E74C3C";
+	} else if(cellValue === "No Improvement") {
+	document.getElementById("CustSatStatus").style.backgroundColor = "#F1C40F";
+	} else if(cellValue === "Improving") {
+	document.getElementById("CustSatStatus").style.backgroundColor = "#2ECC71";
+	} else {
+	document.getElementById("CustSatStatus").style.backgroundColor = "#ffffff";
+	}
+</script>
+
+
+<script>
+	var cellValue = document.getElementById("RiskStatus").textContent.trim(); 
+	if(cellValue === "Red"){
+	document.getElementById("RiskStatus").style.backgroundColor = "#E74C3C";
+	} else if(cellValue === "Amber") {
+	document.getElementById("RiskStatus").style.backgroundColor = "#F1C40F";
+	} else if(cellValue === "Green") {
+	document.getElementById("RiskStatus").style.backgroundColor = "#2ECC71";
+	} else {
+	document.getElementById("RiskStatus").style.backgroundColor = "#ffffff";
+	}
+</script>
+
+<script>
+	var cellValue = document.getElementById("ProcurementStatus").textContent.trim(); 
+	if(cellValue === "Diminishing"){
+	document.getElementById("ProcurementStatus").style.backgroundColor = "#E74C3C";
+	} else if(cellValue === "No Improvement") {
+	document.getElementById("ProcurementStatus").style.backgroundColor = "#F1C40F";
+	} else if(cellValue === "Improving") {
+	document.getElementById("ProcurementStatus").style.backgroundColor = "#2ECC71";
+	} else {
+	document.getElementById("ProcurementStatus").style.backgroundColor = "#ffffff";
+	}
+</script>'
