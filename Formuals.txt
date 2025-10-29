@@ -1,0 +1,49 @@
+634 - Total cost - Actuals
+867 - PROPOSED Margin 
+3589 - Proposed ITD Revenue
+857 - proposed EAC Post Adjustment cost
+3590 - Proposed ITD - Margin
+708 -  tOTAL cOST CTC
+716- Contingency cost ctc
+
+
+
+
+PROPOSED ITD Revenue
+
+iif(isnull(ID2817,0)<>0 and isnull(ID2783,0)<>0,ID2817/(1-(ID2783/100)),0) - GDM
+
+iif(isnull(ID634,0)<>0 and isnull(ID867,0)<>0,ID634/(1-(ID867/100)),0) - UAT
+
+
+
+Proposed ITD - Margin
+
+isnull(ID5287,0)-isnull(ID2779,0) - GDM
+
+isnull(ID3589,0)-isnull(ID857,0) - UAT
+
+
+
+Proposed ITD - Margin %
+
+iif(ISNULL(ID5287,0)<>0,(ID5288/ID5287)*100,0) - GDM
+
+iif(ISNULL(ID3589,0)<>0,(ID3590/ID3589)*100,0) - UAT
+
+
+
+Proposed ITD - POC %
+
+iif(ISNULL(ID2779,0)<>0,(ID2817/ID2779)*100,0) - GDM
+
+iif(ISNULL(ID857,0)<>0,(ID634/ID857)*100,0) - UAT
+
+
+
+
+Contingency % of Cost
+
+iif(ISNULL(ID3447,0)<>0,(ID3455/ID3447)*100,0) - GDM
+
+iif(ISNULL(ID708,0)<>0,(ID716/ID708)*100,0) - UAT
